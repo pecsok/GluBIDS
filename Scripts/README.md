@@ -31,7 +31,11 @@ Actions:
     project/bbl_projects/apps/melliott/scripts/dicom2nifti.sh -u -F \
 
 Outputs: 
-- Niftis  
+- Niftis
+
+*****
+Phase 2: Preprocessing
+*****
 
 #### 3a. Preprocess_cest.sh
 Inputs: path to niftis, output path
@@ -67,6 +71,10 @@ Actions:
 -If not, uses old tools to perform (e.g., N4BiasCorrect; fslmaths -mas; antsRegistrationSyN.sh)
 
 Outputs after steps 3 and 4:
+
+*****
+Phase 3: Data extraction
+*****
 
 #### 5a. process_cest.py
 Inputs: 
