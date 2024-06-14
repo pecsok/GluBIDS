@@ -30,6 +30,7 @@ Acquisitions
 *****
 
 Preliminary Naming Structure
+
 sub-${bblid}/
   ses-${session}/
     anat/
