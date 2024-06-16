@@ -1,0 +1,19 @@
+#!/bin/sh
+
+data=$1
+out=$2
+
+for sub in $(ls $data)
+do
+  
+  # if ! [ -d $out/$sub ]
+  # then
+    bsub python /project/bbl_roalf_longglucest/sandbox/ally/pyGluCEST_2.0/scripts/process_GluCEST.py -i /project/bbl_roalf_pecsokphd/projects/glucest-rsfmri/data/cest/rawdata -o /project/bbl_roalf_pecsokphd/projects/glucest-rsfmri/data/cest/preprocessed -tyrp -d 2 \
+    # bsub python /project/bbl_roalf_longglucest/sandbox/ally/pyGluCEST_2.0/scripts/process_GluCEST.py \
+    # bsub python /project/bbl_roalf_pecsokphd/projects/glucest-rsfmri/github/scripts_copy/process_cest.py \
+      -i $data -o $out \
+      -t syrp -d 2 \
+      -m $out -b hdbet -s create \
+      -c $sub
+  # fi
+done
